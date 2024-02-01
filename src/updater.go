@@ -80,7 +80,7 @@ func (u *Updater) createComposeFileContainerMapping() []*ComposeFile {
 			var err error
 			composeFile, err = ParseComposeYaml(container.ComposeFile)
 			if err != nil {
-				log.Fatalf("Could not parse compose YAML: %s\n", err)
+				log.Fatalf("Could not parse compose YAML [%s]: %s\n", container.ComposeFile, err)
 			}
 			cache[container.ComposeFile] = composeFile
 		}

@@ -33,6 +33,6 @@ jobs:
         context: .
         platforms: linux/amd64,linux/arm64,linux/arm/v7
         push: false
-        tags: virtualzone/compose-updater:${{ github.sha }}
+        tags: carcinoma/compose-updater:${{ github.sha }}
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache-new
