@@ -1,4 +1,4 @@
-module github.com/virtualzone/compose-updater
+module github.com/GamePlayer-8/compose-updater
 
 go 1.24
 
