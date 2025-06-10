@@ -3,7 +3,7 @@
 [![](https://img.shields.io/github/actions/workflow/status/GamePlayer-8/compose-updater/build.yml?branch=master)](https://github.com/GamePlayer-8/compose-updater/actions)
 [![](https://img.shields.io/github/v/release/GamePlayer-8/compose-updater)](https://github.com/GamePlayer-8/compose-updater/releases)
 [![](https://img.shields.io/github/release-date/GamePlayer-8/compose-updater)](https://github.com/GamePlayer-8/compose-updater/releases)
-[![](https://img.shields.io/docker/image-size/8765876588/compose-updater)](https://hub.docker.com/r/8765876588/compose-updater)
+[![](https://img.shields.io/docker/image-size/gameplayer8/compose-updater)](https://hub.docker.com/r/gameplayer8/compose-updater)
 [![](https://img.shields.io/github/license/GamePlayer-8/compose-updater)](https://github.com/GamePlayer-8/compose-updater/blob/master/LICENSE)
 
 A solution for watching your Docker® containers running via Docker Compose for image updates and automatically restarting the compositions whenever an image is refreshed.
@@ -38,7 +38,7 @@ Run Docker Compose Watcher using compose:
 ```yaml
 services:
   watcher:
-    image: 8765876588/compose-updater
+    image: gameplayer8/compose-updater
     restart: always
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
