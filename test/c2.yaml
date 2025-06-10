@@ -1,4 +1,3 @@
-version: '3'
 services:
   test21:
     image: watcher-test-2
