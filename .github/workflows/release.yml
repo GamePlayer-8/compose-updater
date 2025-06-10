@@ -30,7 +30,7 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: docker.io
-        username: carcinoma
+        username: 8765876588
         password: ${{ secrets.CI_REGISTRY_PASSWORD }}
     - name: Build and push
       uses: docker/build-push-action@v2
@@ -39,16 +39,16 @@ jobs:
         platforms: linux/amd64,linux/arm64,linux/arm/v7
         push: true
         tags: |
-          carcinoma/compose-updater:${{ env.CI_VERSION }}
-          carcinoma/compose-updater:latest
+          8765876588/compose-updater:${{ env.CI_VERSION }}
+          8765876588/compose-updater:latest
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache-new
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v2
       with:
-        username: carcinoma
+        username: 8765876588
         password: ${{ secrets.CI_REGISTRY_PASSWORD }}
-        repository: carcinoma/compose-updater
+        repository: 8765876588/compose-updater
         readme-filepath: ./README.md
     - name: Create Release
       uses: actions/create-release@v1
