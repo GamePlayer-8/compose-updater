@@ -1,10 +1,10 @@
 # Compose Updater
 
-[![](https://img.shields.io/github/actions/workflow/status/virtualzone/compose-updater/build.yml?branch=master)](https://github.com/virtualzone/compose-updater/actions)
-[![](https://img.shields.io/github/v/release/virtualzone/compose-updater)](https://github.com/virtualzone/compose-updater/releases)
-[![](https://img.shields.io/github/release-date/virtualzone/compose-updater)](https://github.com/virtualzone/compose-updater/releases)
-[![](https://img.shields.io/docker/image-size/virtualzone/compose-updater)](https://hub.docker.com/r/virtualzone/compose-updater)
-[![](https://img.shields.io/github/license/virtualzone/compose-updater)](https://github.com/virtualzone/compose-updater/blob/master/LICENSE)
+[![](https://img.shields.io/github/actions/workflow/status/GamePlayer-8/compose-updater/build.yml?branch=master)](https://github.com/GamePlayer-8/compose-updater/actions)
+[![](https://img.shields.io/github/v/release/GamePlayer-8/compose-updater)](https://github.com/GamePlayer-8/compose-updater/releases)
+[![](https://img.shields.io/github/release-date/GamePlayer-8/compose-updater)](https://github.com/GamePlayer-8/compose-updater/releases)
+[![](https://img.shields.io/docker/image-size/8765876588/compose-updater)](https://hub.docker.com/r/8765876588/compose-updater)
+[![](https://img.shields.io/github/license/GamePlayer-8/compose-updater)](https://github.com/GamePlayer-8/compose-updater/blob/master/LICENSE)
 
 A solution for watching your Docker® containers running via Docker Compose for image updates and automatically restarting the compositions whenever an image is refreshed.
 
@@ -20,7 +20,6 @@ Currently, Compose Updater doesn't help you when your're using image tags that w
 You'll need to add two labels to the services you want to watch:
 
 ```yaml
-version: '3'
 services:
   web:
     image: nginx:alpine
@@ -37,10 +36,9 @@ services:
 Run Docker Compose Watcher using compose:
 
 ```yaml
-version: '3'
 services:
   watcher:
-    image: virtualzone/compose-updater
+    image: 8765876588/compose-updater
     restart: always
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
